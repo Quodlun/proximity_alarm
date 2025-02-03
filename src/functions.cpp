@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <toneAC.h>
-#include <NewPing.h>
+#include <Ultrasonic.h>
 #include "define.h"
 
 /// @section 蜂鳴器運作副程式

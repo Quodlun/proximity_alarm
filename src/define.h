@@ -11,6 +11,9 @@
 #define buzzerVolume  10
 #define maxDistance   300
 
+/// @section 變數定義
+extern int distance = 0;
+
 /// @section 副程式定義
 void sonarDetected ();
 
