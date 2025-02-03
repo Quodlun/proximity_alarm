@@ -3,6 +3,7 @@
 #include <NewPing.h>
 #include "define.h"
 
+/// @section 蜂鳴器運作副程式
 void buzzerWork ()
 {
   NewTone ( buzzerPin, buzzerTone, 150 );

@@ -6,6 +6,7 @@
 /// @brief 距離感測器初始化
 NewPing sonar ( triggerPin, echoPin, maxDistance );
 
+/// @section Setup 程式
 void setup ()
 {
   /// @brief 初始化序列埠, 鮑率: 9600
@@ -15,6 +16,7 @@ void setup ()
   pinMode ( buzzerPin, OUTPUT );
 }
 
+/// @section 主程式
 void loop ()
 {
   /// @brief 距離感測器測距
