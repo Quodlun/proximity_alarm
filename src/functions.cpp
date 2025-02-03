@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include <NewTone.h>
+#include <toneAC.h>
 #include <NewPing.h>
 #include "define.h"
 
@@ -7,17 +7,17 @@
 void sonarDetected ()
 {
   digitalWrite ( ledPin, HIGH );
-  NewTone ( buzzerPin, buzzerTone, 150 );
+  toneAC ( buzzerTone, buzzerVolume, 150, true );
   digitalWrite ( ledPin, LOW );
   delay ( 175 );
 
   digitalWrite ( ledPin, HIGH );
-  NewTone ( buzzerPin, buzzerTone, 300 );
+  toneAC ( buzzerTone, buzzerVolume, 300, true );
   digitalWrite ( ledPin, LOW );
   delay ( 450 );
 
   digitalWrite ( ledPin, HIGH );
-  NewTone ( buzzerPin, buzzerTone, 300 );
+  toneAC ( buzzerTone, buzzerVolume, 300, true );
   digitalWrite ( ledPin, LOW );
   delay ( 1300 );
 }
