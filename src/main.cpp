@@ -23,16 +23,10 @@ void loop ()
   unsigned int distance = sonar.ping_cm ();
 
   /// @brief 偵測距離是否小於等於 50 公分
-  if ( distance <= 50 )
+  if ( distance <= 20 )
   {
     /// @brief 呼叫蜂鳴器副程式
     buzzerWork ();
-  }
-
-  else 
-  {
-    /// @brief 平衡偵測時間
-    delay ( 2000 );
   }
 
   /// @brief 顯示距離
