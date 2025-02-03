@@ -1,10 +1,13 @@
 #include <Arduino.h>
 #include <toneAC.h>
-#include <Ultrasonic.h>
+#include <NewPing.h>
 #include "define.h"
 
 /// @brief 距離感測器初始化
-Ultrasonic ultrasonic ( triggerPin, echoPin );
+NewPing sonar ( triggerPin, echoPin, maxDistance );
+
+/// @section 變數定義
+int distance = 0;
 
 /// @section Setup 程式
 void setup ()
@@ -20,7 +23,7 @@ void setup ()
 void loop ()
 {
   /// @brief 距離感測器測距
-  int distance = ultrasonic.read();
+  unsigned int distance = sonar.ping_cm ();
 
   /// @brief 偵測距離是否小於等於 20 公分
   if ( distance <= 20 )
