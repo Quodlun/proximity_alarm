@@ -25,11 +25,12 @@ void loop ()
   /// @brief 距離感測器測距
   unsigned int distance = sonar.ping_cm ();
 
-  /// @brief 偵測距離是否小於等於 20 公分
-  if ( distance <= 20 )
+  /// @brief 偵測距離是否小於等於 10 公分
+  if ( distance <= 10 )
   {
     /// @brief 呼叫蜂鳴器副程式
     sonarDetected ();
+    // ledDebug ();
   }
 
   /// @brief 顯示距離

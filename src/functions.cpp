@@ -20,4 +20,22 @@ void sonarDetected ()
   toneAC ( buzzerTone, buzzerVolume, 300, 1 );
   digitalWrite ( ledPin, LOW );
   delay ( 1300 );
-} 
+}
+
+void ledDebug ()
+{
+  digitalWrite ( 8, HIGH );
+  delay ( 150 );
+  digitalWrite ( 8, LOW );
+  delay ( 25 );
+
+  digitalWrite ( 8, HIGH );
+  delay ( 300 );
+  digitalWrite ( 8, LOW );
+  delay ( 150 );
+
+  digitalWrite ( 8, HIGH );
+  delay ( 300 );
+  digitalWrite ( 8, LOW );
+  delay ( 1000 );
+}
