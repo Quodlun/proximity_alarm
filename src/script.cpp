@@ -1,6 +1,14 @@
 #include <Arduino.h>
 #include "define.h"
 
+unsigned long measureDistance ()
+{
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  return ( pulseIn(echoPin, HIGH) / 58 );
+}
+
 void ledBlink ()
 {
   digitalWrite ( ledPin, HIGH );

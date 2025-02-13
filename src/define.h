@@ -3,6 +3,10 @@
 
 #define ledPin 2
 
+#define trigPin 21
+#define echoPin 20
+
+unsigned long measureDistance ();
 void ledBlink ();
 
 #endif
