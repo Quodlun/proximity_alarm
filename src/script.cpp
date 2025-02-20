@@ -24,6 +24,7 @@ void ledSetup ()
   for ( int i = 5; i < 8; i ++ )
   {
     pinMode ( i, OUTPUT );
+    digitalWrite ( i, LOW );
   }
   
   for ( int i = 0, i < 4, i ++ )
