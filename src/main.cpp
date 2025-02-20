@@ -7,10 +7,15 @@ void setup()
 {
   Serial.begin ( 9600 );
   
-  pinMode( ledPin, OUTPUT );
-  digitalWrite( ledPin, HIGH );
+  for ( int i = 5; i < 8; i++ )
+  {
+    pinMode( i, OUTPUT );
+    digitalWrite( i, HIGH );
+  }
+
   pinMode( trigPin, OUTPUT );
   pinMode( echoPin, INPUT );
+
   pinMode( buzzerPin, OUTPUT );
 }
 
