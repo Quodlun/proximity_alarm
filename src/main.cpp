@@ -1,5 +1,6 @@
 #include <Arduino.h>
-#include "define.h"
+#include "..\lib\define.h"
+#include "..\lib\script.cpp"
 
 float cm;
 
