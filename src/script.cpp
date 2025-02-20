@@ -27,21 +27,21 @@ void ledSetup ()
     digitalWrite ( i, LOW );
   }
   
-  for ( int i = 0, i < 4, i ++ )
+  for ( int i = 0; i < 4; i ++ )
   {
-    digitalWrite ( ledSetupSort [ i ], HIgh )
-    delay ( 30 );
-    digitalWrite ( ledSetupSort [ i ], LOW )
+    digitalWrite ( ledSetupSort [ i ], HIGH );
+    delay ( 300 );
+    digitalWrite ( ledSetupSort [ i ], LOW );
   }
   
-  delay ( 1000 );
+  delay ( 500 );
   
   allLedOn ();
   
   
 }
 
-unsigned float rangeFinding ()
+float rangeFinding ()
 {
   digitalWrite( trigPin, LOW );
   delayMicroseconds( 2 );

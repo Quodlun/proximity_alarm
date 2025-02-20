@@ -8,7 +8,7 @@
 #define buzzerTone 1568
 
 void ledSetup ();
-unsigned float rangeFinding ();
+float rangeFinding ();
 void alarmWork ();
 
 #endif
