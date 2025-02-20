@@ -21,7 +21,8 @@ void loop ()
   
   if ( cm < 10 )
   {
-    alarmWork ();  }
+    alarmWork ();
+  }
   
   Serial.print ( "Distance:" ); 
   Serial.print ( cm );

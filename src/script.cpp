@@ -30,7 +30,7 @@ void ledSetup ()
   for ( int i = 0; i < 4; i ++ )
   {
     digitalWrite ( ledSetupSort [ i ], HIGH );
-    delay ( 300 );
+    delay ( 100 );
     digitalWrite ( ledSetupSort [ i ], LOW );
   }
   
