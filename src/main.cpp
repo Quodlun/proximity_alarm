@@ -1,17 +1,13 @@
 #include <Arduino.h>
 #include "define.h"
 
-float duration, cm;
+float cm;
 
-void setup()
+void setup ()
 {
   Serial.begin ( 9600 );
   
-  for ( int i = 5; i < 8; i++ )
-  {
-    pinMode( i, OUTPUT );
-    digitalWrite( i, HIGH );
-  }
+  ledSetup ();
 
   pinMode( trigPin, OUTPUT );
   pinMode( echoPin, INPUT );
@@ -19,17 +15,10 @@ void setup()
   pinMode( buzzerPin, OUTPUT );
 }
 
-void loop()
+void loop ()
 {
-  digitalWrite( trigPin, LOW );
-  delayMicroseconds( 2 );
-  digitalWrite( trigPin, HIGH );
-  delayMicroseconds( 10 );
-  digitalWrite( trigPin, LOW );
+  cm = rangeFinding ();
   
-  duration = pulseIn( echoPin, HIGH );
-  
-  cm = ( duration/2 ) / 29.1;
   if( cm < 10 )
   {
     alarmWork ();

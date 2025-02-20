@@ -1,6 +1,43 @@
 #include <Arduino.h>
 #include "define.h"
 
+void ledSetup ()
+{
+  int ledSetupSort [ 4 ] = { 5, 6, 7, 5 };
+  
+  for ( int i = 5; i < 8; i ++ )
+  {
+    pinMode ( i, OUTPUT );
+  }
+  
+  for ( int i = 0, i < 5, i ++ )
+  {
+    digitalWrite ( ledSetupSort [ i ], HIgh )
+    delay ( 30 );
+    digitalWrite ( ledSetupSort [ i ], LOW )
+  }
+  
+  delay ( 1000 );
+  
+  for ( int i = 5; i < 8; i ++ )
+  {
+    digitalWrite ( i, HIGH );
+  }
+  
+  
+}
+
+int rangeFinding ()
+{
+  digitalWrite( trigPin, LOW );
+  delayMicroseconds( 2 );
+  digitalWrite( trigPin, HIGH );
+  delayMicroseconds( 10 );
+  digitalWrite( trigPin, LOW );
+  
+  return ( ( pulseIn( echoPin, HIGH ) / 2 ) / 29.1 );
+}
+
 void alarmWork ()
 {
   tone( buzzerPin, 1568 );
