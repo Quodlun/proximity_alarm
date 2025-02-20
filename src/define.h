@@ -7,7 +7,7 @@
 #define buzzerPin 8
 
 void ledSetup ();
-float rangeFinding ();
+unsigned float rangeFinding ();
 void alarmWork ();
 
 #endif

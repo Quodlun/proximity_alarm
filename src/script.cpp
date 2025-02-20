@@ -27,7 +27,7 @@ void ledSetup ()
   
 }
 
-int rangeFinding ()
+unsigned float rangeFinding ()
 {
   digitalWrite( trigPin, LOW );
   delayMicroseconds( 2 );
