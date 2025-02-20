@@ -1,6 +1,22 @@
 #include <Arduino.h>
 #include "define.h"
 
+void allLedOn ()
+{
+  for ( int i = 5; i < 8; i ++ )
+  {
+    digitalWrite ( i, HIGH );
+  }
+}
+
+void allLedOff ()
+{
+  for ( int i = 5; i < 8; i ++ )
+  {
+    digitalWrite ( i, LOW );
+  }
+}
+
 void ledSetup ()
 {
   int ledSetupSort [ 4 ] = { 5, 6, 7, 5 };
@@ -19,10 +35,7 @@ void ledSetup ()
   
   delay ( 1000 );
   
-  for ( int i = 5; i < 8; i ++ )
-  {
-    digitalWrite ( i, HIGH );
-  }
+  allLedOn ();
   
   
 }
@@ -41,41 +54,23 @@ unsigned float rangeFinding ()
 void alarmWork ()
 {
   tone( buzzerPin, buzzerTone );
-  for ( int i = 5; i < 8; i++ )
-  {
-    digitalWrite( i, LOW );
-  }
+  allLedOff ();
   delay( 150 );
   noTone( buzzerPin );
-  for ( int i = 5; i < 8; i++ )
-  {
-    digitalWrite( i, HIGH );
-  }
+  allLedOn ();
   delay( 25 );
   
   tone( buzzerPin, buzzerTone );
-  for ( int i = 5; i < 8; i++ )
-  {
-    digitalWrite( i, LOW );
-  }
+  allLedOff ();
   delay( 300 );
   noTone( buzzerPin );
-  for ( int i = 5; i < 8; i++ )
-  {
-    digitalWrite( i, HIGH );
-  }
+  allLedOn ();
   delay( 150 );
   
   tone( buzzerPin, buzzerTone );
-  for ( int i = 5; i < 8; i++ )
-  {
-    digitalWrite( i, LOW );
-  }
+  allLedOff ();
   delay( 300 );
   noTone( buzzerPin );
-  for ( int i = 5; i < 8; i++ )
-  {
-    digitalWrite( i, HIGH );
-  }
+  allLedOn ();
   delay( 1000 );
 }
