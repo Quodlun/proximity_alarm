@@ -9,26 +9,25 @@ void setup ()
   
   ledSetup ();
 
-  pinMode( trigPin, OUTPUT );
-  pinMode( echoPin, INPUT );
+  pinMode ( trigPin, OUTPUT );
+  pinMode ( echoPin, INPUT );
 
-  pinMode( buzzerPin, OUTPUT );
+  pinMode ( buzzerPin, OUTPUT );
 }
 
 void loop ()
 {
   cm = rangeFinding ();
   
-  if( cm < 10 )
+  if ( cm < 10 )
   {
     alarmWork ();
   }
   
-  Serial.print( "Distance:" ); 
-  Serial.print( cm );
-  Serial.print( "cm" );
-  Serial.println();
+  Serial.print ( "Distance:" ); 
+  Serial.print ( cm );
+  Serial.print ( "cm" );
+  Serial.println ();
   
-  delay(50);
+  delay ( 50 );
 }
-
