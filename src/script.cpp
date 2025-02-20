@@ -40,7 +40,7 @@ unsigned float rangeFinding ()
 
 void alarmWork ()
 {
-  tone( buzzerPin, 1568 );
+  tone( buzzerPin, buzzerTone );
   for ( int i = 5; i < 8; i++ )
   {
     digitalWrite( i, LOW );
@@ -53,7 +53,7 @@ void alarmWork ()
   }
   delay( 25 );
   
-  tone( buzzerPin, 1568 );
+  tone( buzzerPin, buzzerTone );
   for ( int i = 5; i < 8; i++ )
   {
     digitalWrite( i, LOW );
@@ -66,7 +66,7 @@ void alarmWork ()
   }
   delay( 150 );
   
-  tone( buzzerPin, 1568 );
+  tone( buzzerPin, buzzerTone );
   for ( int i = 5; i < 8; i++ )
   {
     digitalWrite( i, LOW );

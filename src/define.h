@@ -5,6 +5,7 @@
 #define echoPin A0
 
 #define buzzerPin 8
+#define buzzerTone 1568
 
 void ledSetup ();
 unsigned float rangeFinding ();
