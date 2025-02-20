@@ -1,12 +1,13 @@
 #ifndef DEFINE_H
 #define DEFINE_H
 
-#define ledPin 2
+#define ledPin 7
 
-#define trigPin 21
-#define echoPin 20
+#define trigPin 12
+#define echoPin A0
 
-unsigned long measureDistance ();
-void ledBlink ();
+#define buzzerPin 8
+
+void alarmWork ();
 
 #endif
