@@ -10,7 +10,7 @@ void ledSetup ()
     pinMode ( i, OUTPUT );
   }
   
-  for ( int i = 0, i < 5, i ++ )
+  for ( int i = 0, i < 4, i ++ )
   {
     digitalWrite ( ledSetupSort [ i ], HIgh )
     delay ( 30 );
