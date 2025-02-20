@@ -2,8 +2,6 @@
 #include "..\lib\define.h"
 #include "..\lib\script.cpp"
 
-float cm;
-
 void setup ()
 {
   Serial.begin ( 9600 );
@@ -18,17 +16,12 @@ void setup ()
 
 void loop ()
 {
-  cm = rangeFinding ();
+  float cm = rangeFinding ();
   
   if ( cm < 10 )
   {
     alarmWork ();
   }
-  
-  Serial.print ( "Distance:" ); 
-  Serial.print ( cm );
-  Serial.print ( "cm" );
-  Serial.println ();
   
   delay ( 50 );
 }
