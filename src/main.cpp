@@ -1,6 +1,6 @@
 #include <Arduino.h>
-#include "..\lib\define.h"
-#include "..\lib\script.cpp"
+#include "..\lib\MyLib\MyLib.h
+#include "..\lib\MyLib\MyLib.cpp"
 
 void setup ()
 {
