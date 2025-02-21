@@ -4,8 +4,6 @@
 
 void setup ()
 {
-  Serial.begin ( 9600 );
-  
   ledSetup ();
 
   pinMode ( trigPin, OUTPUT );
@@ -15,10 +13,8 @@ void setup ()
 }
 
 void loop ()
-{
-  float cm = rangeFinding ();
-  
-  if ( cm < 10 )
+{  
+  if ( rangeFinding () < 10 )
   {
     alarmWork ();
   }
