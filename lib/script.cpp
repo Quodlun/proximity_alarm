@@ -1,25 +1,11 @@
 #include <Arduino.h>
 #include "define.h"
 
-void allLedOn ()
-{
-  for ( int i = 5; i < 8; i ++ )
-  {
-    digitalWrite ( i, HIGH );
-  }
-}
-
-void allLedOff ()
-{
-  for ( int i = 5; i < 8; i ++ )
-  {
-    digitalWrite ( i, LOW );
-  }
-}
-
 void ledSetup ()
 {
   int ledSetupSort [ 4 ] = { 5, 6, 7, 5 };
+  
+  pinMode ( allLedPin, OUTPUT );
   
   for ( int i = 5; i < 8; i ++ )
   {
@@ -36,7 +22,7 @@ void ledSetup ()
   
   delay ( 500 );
   
-  allLedOn ();
+  digitalWrite ( allLedPin, HIGH );
   
   
 }
@@ -55,23 +41,23 @@ float rangeFinding ()
 void alarmWork ()
 {
   tone( buzzerPin, buzzerTone );
-  allLedOff ();
+  digitalWrite ( allLedPin, LOW );
   delay( 150 );
   noTone( buzzerPin );
-  allLedOn ();
+  digitalWrite ( allLedPin, HIGH );
   delay( 25 );
   
   tone( buzzerPin, buzzerTone );
-  allLedOff ();
+  digitalWrite ( allLedPin, LOW );
   delay( 300 );
   noTone( buzzerPin );
-  allLedOn ();
+  digitalWrite ( allLedPin, HIGH );
   delay( 150 );
   
   tone( buzzerPin, buzzerTone );
-  allLedOff ();
+  digitalWrite ( allLedPin, LOW );
   delay( 300 );
   noTone( buzzerPin );
-  allLedOn ();
+  digitalWrite ( allLedPin, HIGH );
   delay( 1000 );
 }
