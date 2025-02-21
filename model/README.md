@@ -1,5 +1,3 @@
-# Folder For Proximity Alarm's 3D 1.
-
----
+# Folder For Proximity Alarm's 3D.
 
 Please put model files here so it wouldn't messed up all the stuff, thank you.
