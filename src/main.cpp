@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "..\lib\MyLib\MyLib.h
+#include "..\lib\MyLib\MyLib.h"
 #include "..\lib\MyLib\MyLib.cpp"
 
 void setup ()
