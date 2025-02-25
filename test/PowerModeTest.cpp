@@ -22,7 +22,7 @@ void setup()
   /* Next we have to enable an interrupt.
 
   The function is set up like this attachInterrupt(pin, function, triggerMode)
-
+  
   PIN – can be either a 0 to call out digital pin 2 or 1 to call out digital pin 3.
 
   FUNCTION – This is the function that will be run while in the interrupt
